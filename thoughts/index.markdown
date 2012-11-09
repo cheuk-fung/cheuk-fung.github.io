@@ -7,11 +7,11 @@ feed: atom.xml
 keywords: Thoughts, Operating Systems, Compilers, Languages
 ---
 
-Thoughts on My Interesting Fields
-=================================
+Thoughts on The Fields of My Interest
+=====================================
 
-My Interesting fields including Operating Systems, Compilers, Languages,
-etc.
+The fields of my interest including Operating Systems, Compilers,
+Languages, etc.
 
 A complete archive of [past](past.html) posts, is available via the link
 above.

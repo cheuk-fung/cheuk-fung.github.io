@@ -43,7 +43,7 @@ the following categories is also available.
 +-- {.section}
 [Thoughts](/thoughts)
 ---------------------
-Thoughts on my interesting fields, including Operating Systems,
+Thoughts on the fields of my interest, including Operating Systems,
 Compilers, Languages, etc.
 {% for post in site.categories.thoughts limit:5 %}
 <ul class="compact recent">
