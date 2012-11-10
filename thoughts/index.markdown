@@ -4,14 +4,15 @@ title: Home
 section: Home
 
 feed: atom.xml
-keywords: Thoughts, Operating Systems, Compilers, Languages
+keywords: Thoughts, Operating Systems, Compilers, Languages,
+          Data structures, Algorithms, Design
 ---
 
 Thoughts on The Fields of My Interest
 =====================================
 
-The fields of my interest including Operating Systems, Compilers,
-Languages, etc.
+The fields of my interest including operating systems, compilers,
+languages, data structures and algorithm design, etc.
 
 A complete archive of [past](past.html) posts, is available via the link
 above.

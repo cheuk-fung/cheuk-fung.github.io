@@ -4,7 +4,8 @@ title: Archives
 section: Past
 
 feed: atom.xml
-keywords: Thoughts, Operating Systems, Compilers, Languages
+keywords: Thoughts, Operating Systems, Compilers, Languages,
+          Data structures, Algorithms, Design
 ---
 
 Archives

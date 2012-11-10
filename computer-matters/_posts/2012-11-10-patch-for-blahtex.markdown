@@ -1,5 +1,5 @@
 ---
-layout: misc
+layout: computer-matters
 title: Patch for Blahtex
 location: NKU, China
 post: true

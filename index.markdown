@@ -43,8 +43,8 @@ the following categories is also available.
 +-- {.section}
 [Thoughts](/thoughts)
 ---------------------
-Thoughts on the fields of my interest, including Operating Systems,
-Compilers, Languages, etc.
+Thoughts on the fields of my interest, including operating systems,
+compilers, languages, data structures and algorithm design, etc.
 {% for post in site.categories.thoughts limit:5 %}
 <ul class="compact recent">
 <li>
@@ -56,10 +56,10 @@ Compilers, Languages, etc.
 =--
 
 +-- {.section}
-[Algorithms](/algorithms)
--------------------------
-Notes on algorithm design and data structures.
-{% for post in site.categories.algorithms limit:5 %}
+[Computer Matters](/computer-matters)
+---------------------
+Notes on solutions to some computer related problems I encountered.
+{% for post in site.categories.computer-matters limit:5 %}
 <ul class="compact recent">
 <li>
 	<a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }}</a>

@@ -4,17 +4,17 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    <title>Algorithms -- {{ site.name }}</title>
-    <link href="http://{{ site.link }}/algorithms/atom.xml" rel="self"/>
-    <link href="http://{{ site.link }}/algorithms"/>
+    <title>Computer Matters -- {{ site.name }}</title>
+    <link href="http://{{ site.link }}/computer-matters/atom.xml" rel="self"/>
+    <link href="http://{{ site.link }}/computer-matters"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
-    <id>http://{{ site.link }}/algorithms</id>
+    <id>http://{{ site.link }}/computer-matters</id>
     <author>
         <name>{{ site.author }}</name>
         <email>{{ site.email }}</email>
     </author>
 
-    {% for post in site.categories.algorithms limit:10 %}
+    {% for post in site.categories.computer-matters limit:10 %}
     <entry>
         <title>{{ post.title }}</title>
         <link href="http://{{ site.link }}{{ post.url }}"/>

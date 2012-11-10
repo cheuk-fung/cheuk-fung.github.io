@@ -24,7 +24,7 @@ int main(int argc, char *args[]) {
 }
 {% endhighlight %}
 
-<p style="text-align:right">My story is still being written, it’s way to early for a conclusion.</p>
+<p style="text-align:right">My story is still being written, it’s way too early for a conclusion.</p>
 
 
 Contact

@@ -4,8 +4,6 @@ title: Archives
 section: Past
 
 feed: ../atom.xml
-keywords: Algorithms, Data Structures, Design, Thoughts, Operating
-          Systems, Compilers, Languages, Misc, Life
 ---
 
 Archives
