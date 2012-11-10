@@ -15,7 +15,7 @@ didn't forget anything that should be modified :-)
 [GitHub Pages]: http://pages.github.com
 [Mark Reid]: http://mark.reid.name
 
-The major modifications I made were supporting [MathJax][] and the
+The major modifications I made were the support of [MathJax][] and the
 reorganization of layouts which makes it easier to create new
 categories. All codes of this site are available [here][].
 
