@@ -47,5 +47,5 @@ Patches
 =======
 [Blahtex](http://gva.noekeon.org/blahtexml)
 :   Fix "error: ‘isatty’ was not declared in this scope" [here].
-[here]: {% post_url 2012-11-10-patch-for-blahtex %}
+[here]: /misc/patch-for-blahtex.html
 =--
