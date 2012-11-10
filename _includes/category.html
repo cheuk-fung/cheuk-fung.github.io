@@ -1,19 +1,8 @@
----
-layout: default
-category: Algorithms
-cate: algorithms
-top: Algorithms
-feed: atom.xml
----
-
 <div id="header">
     {% include nav-cate.html %}
-
-    {% if page.mathjax == true %}
-    {% include mathjax.html %}
-    {% endif %}
 </div>
 
+{% if page.post == true %}
 <div id="page">
 
     <h1 class="emphnext">{{ page.title }}</h1>
@@ -26,5 +15,9 @@ feed: atom.xml
         <span class="location">{{ page.location }}</span>
     </address>
 </div><!-- End Page -->
-
 {% include disqus.html %}
+{% else %}
+<div id="page">
+    {{ content }}
+</div>
+{% endif %}
