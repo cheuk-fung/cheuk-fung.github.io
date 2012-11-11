@@ -25,12 +25,12 @@ When compiling blahtex, I met the following error:
 
 According to the man page of `isatty`, it should has `unistd.h`
 included. Another file `mainPng.cpp` has the same problem. We can fix it
-just by including `unistd.h` in both files.
+by including `unistd.h` in both files.
 
-The patch file is available [here][gist]. For Arch Linux users, you can build
-from [aur][].
+Here's the patch:
 
-[gist]: https://gist.github.com/4050492
-[aur]: https://aur.archlinux.org/packages/blahtex
+<script src="https://gist.github.com/4050492.js"> </script>
+
+And for Arch Linux users, you can build from [aur](https://aur.archlinux.org/packages/blahtex).
 
 [^1]: More information about math support in maruku: <http://maruku.rubyforge.org/math.xhtml>
