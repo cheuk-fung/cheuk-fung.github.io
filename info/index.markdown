@@ -9,7 +9,8 @@ Who am I?
 {% highlight c %}
 #include <stdio.h>
 
-int main(int argc, char *args[]) {
+int main(int argc, char *args[])
+{
     printf("Name:\t%s\n",       "Ng Cheuk-fung");
     printf("School:\t%s\n",     "NKU");
     printf("Major:\t%s\n",      "Computer Science");
