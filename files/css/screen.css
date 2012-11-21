@@ -178,6 +178,12 @@ ol li {
 	list-style-type: decimal;
 	list-style-position: inside;
 }
+#page ol {
+    padding-left: 1.5em;
+}
+#page ol li {
+	list-style-position: outside;
+}
 dt { font-weight: bold;}
 dd { margin: 0 0 1.5em 0; text-align: justify; }
 

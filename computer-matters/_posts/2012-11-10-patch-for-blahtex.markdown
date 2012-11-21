@@ -4,7 +4,7 @@ title: Patch for Blahtex
 location: NKU, China
 post: true
 
-excerpt: "error: ‘isatty’ was not declared in this scope"
+excerpt: "A solution of error: ‘isatty’ was not declared in this scope"
 ---
 
 If you want to enable [Maruku]’s support of inline LaTeX-style math[^1]

@@ -4,7 +4,7 @@ title: Compiling i386 Assembly Code on x86_64 Linux
 location: NKU, China
 post: true
 
-excerpt: Using `as` and `ld`
+excerpt: Using as with the --32 option and ld with --melf_i386.
 ---
 
 I happened to write an i386 assembly program but unfortunately, I'm
@@ -15,6 +15,7 @@ program.
 Take the following hello world program as an example.
 
 {% highlight gas %}
+# hello.s
 .data
         msg : .ascii "hello, world\n"
         len = . - msg
