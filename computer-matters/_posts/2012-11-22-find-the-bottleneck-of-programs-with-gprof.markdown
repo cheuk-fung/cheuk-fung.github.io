@@ -29,8 +29,8 @@ Gprof is a performance analyzing tool, aka, profiler, which can display
 call graph profile data.
 
 
-How to Use Gprof
-----------------
+Usage of Gprof
+--------------
 
 1. Compile the program using `gcc` with the `-pg` option.
 2. Run it and get a file named `gmon.out` containing dynamic call graph
@@ -42,7 +42,7 @@ How to Use Gprof
 Visualization
 -------------
 
-To visualize the output of `gprof`, the following tools are needed.
+To visualize the output of `gprof`, the following tools are recommended.
 
 ### [Gprof2Dot][] ###
 Convert profiling output to a dot graph.
@@ -66,6 +66,6 @@ Additionally,
 > nodes and edges via the -n / --node-thres and -e / --edge-thres
 > options, as:
 
-    gprof2dot.py -n0 -e0
+>     gprof2dot.py -n0 -e0
 
 And now, it's not a big deal to find the bottleneck of programs.
