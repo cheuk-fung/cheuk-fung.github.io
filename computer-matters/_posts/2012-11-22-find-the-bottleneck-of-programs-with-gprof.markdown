@@ -35,7 +35,7 @@ Usage of Gprof
 1. Compile the program using `gcc` with the `-pg` option.
 2. Run it and get a file named `gmon.out` containing dynamic call graph
    and profile.
-3. Run `gprof program` to view the flat profile and call graph with
+3. Run `gprof ./program` to view the flat profile and call graph with
    detailed explanation of each field.
 
 
@@ -56,7 +56,7 @@ language scripts.
 I moved `gprof2dot.py` to `/usr/bin` as `gprof2dot` for convenient,
 therefore, I can generate a png or many other format file by:
 
-    gprof program | gprof2dot | dot -Tpng -o a.png
+    gprof ./program | gprof2dot | dot -Tpng -o a.png
 
 Additionally,
 
@@ -67,5 +67,22 @@ Additionally,
 > options, as:
 
 >     gprof2dot.py -n0 -e0
+
+
+What About Memory Information
+-----------------------------
+
+Gprof can't tell us about this. That's why I need [Valgrind][], a suite
+of tools for memory debugging, memory leak detection and profiling.
+[Valgrind]: http://valgrind.org
+
+Memcheck is the default tool of Valgrind, so, to check memory usage and
+detect memory leak, run:
+
+    valgrind ./program
+
+To run the other tools, cachegrind for instance:
+
+    valgrind --tool=cachegrind ./program
 
 And now, it's not a big deal to find the bottleneck of programs.
