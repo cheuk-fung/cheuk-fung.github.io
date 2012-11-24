@@ -54,7 +54,7 @@ excerpt: A newbie to Ruby.
 
 ### 迭代器 ###
 
-- 貌似是從 Ruby 1.9 以後，`retry` 必須要和 `rescue` 一起用，所以 `retry` 的樣例程式會產生 `SyntaxError`(`Invalid retry`)。改成下面這個樣子就沒問題了：
+- 貌似是從 Ruby 1.9 以後，`retry` 必須要和 `rescue` 一起用，所以 `retry` 的範例程式會產生 `SyntaxError`(`Invalid retry`)。改成下面這個樣子就沒問題了：
 
 {% highlight ruby %}
     c = 0
@@ -71,7 +71,7 @@ excerpt: A newbie to Ruby.
     print "\n"
 {% endhighlight %}
 
-- 後面那個例子要改成：[^0]
+- 後面那個範例和 `yield` 在一起，要明白 `retry` 的是哪一部分：
 
 {% highlight ruby %}
     def WHILE(cond)
@@ -88,3 +88,5 @@ excerpt: A newbie to Ruby.
       retry
     end
 {% endhighlight %}
+
+- 不過這種使用 `retry` 的方式很糟糕的感覺。
