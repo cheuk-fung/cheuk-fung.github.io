@@ -20,7 +20,7 @@ Take the following hello world program as an example.
         msg : .ascii "hello, world\n"
         len = . - msg
 .text
-.global _start
+.globl _start
 
 _start:
         movl $len, %edx
