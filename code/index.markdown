@@ -10,9 +10,11 @@ Eventually this page will contain links to most of the research and
 non-research related programming I am currently working or have done.
 
 +-- {.section}
-Courses
-=======
-TODO
+Projects
+========
+[C--](https://github.com/leewings/C--)
+:   A buggy C compiler with limited features. Designed under instruction
+    of the _Purple Dragon Book_.
 =--
 
 +-- {.section}
@@ -24,13 +26,14 @@ Contests
     [ACM-ICPC](http://icpc.baylor.edu/).
 
     Additionally, a collection of codes of specific algorithms and data
-    structures is available under [Templates](https://github.com/leewings/ACM/tree/master/Templates).
+    structures is available under [Templates][].
 
 [POJ]: http://poj.org
 [ZOJ]: http://acm.zju.edu.cn/onlinejudge
 [SGU]: http://acm.sgu.ru
 [HDOJ]: http://acm.hdu.edu.cn
 [NKOJ]: http://acm.nankai.edu.cn
+[Templates]: https://github.com/leewings/ACM/tree/master/Templates
 
 [TopCoder](https://github.com/leewings/TopCoder)
 :   Handle: [Leewings](http://community.topcoder.com/tc?module=MemberProfile&cr=23001176)
