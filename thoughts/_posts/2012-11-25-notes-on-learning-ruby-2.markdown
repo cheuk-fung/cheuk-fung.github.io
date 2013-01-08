@@ -24,7 +24,8 @@ excerpt: A newbie to Ruby.
 
 - `Object` 類別是所有類別的父類別，不在任何一個類別中定義的「函數」其實是它的**私有**方法，所以 Ruby 是**純物件導向語言**。
 - 雖然所有類別從 `Object` 類別繼承了這些方法，但由於它們是私有方法，所以只能以函數的方式呼叫出來。
-- `private:method` 冒號後面不能加空格……
+- <del><code>private:method</code> 冒號後面不能加空格……</del>
+有種東西叫字串符号 (Symbol)，它就是一個可識別的名字而不是字串物串，所以這裡更好的寫法是：`private :method`。
 
 ### 單件方法 ###
 
@@ -40,13 +41,15 @@ excerpt: A newbie to Ruby.
 
 {% highlight ruby %}
     def foo
-      x = Proc.new { return "I am foo." }
-      puts x.call
+        x = Proc.new { return "I am foo." }
+        puts x.call
+        puts "foo ends."
     end
 
     def bar
-      x = lambda { return "I am bar." }
-      puts x.call
+        x = lambda { return "I am bar." }
+        puts x.call
+        puts "bar ends."
     end
 
     foo
@@ -56,5 +59,6 @@ excerpt: A newbie to Ruby.
 - 產生的輸出是：[^0]
 
         I am bar.
+        bar ends.
 
 - Got it?
