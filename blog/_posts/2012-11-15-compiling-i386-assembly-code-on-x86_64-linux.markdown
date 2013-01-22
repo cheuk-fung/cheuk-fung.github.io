@@ -1,5 +1,5 @@
 ---
-layout: computer-matters
+layout: blog
 title: Compiling i386 Assembly Code on x86_64 Linux
 location: NKU, China
 post: true

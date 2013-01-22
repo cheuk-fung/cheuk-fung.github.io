@@ -1,5 +1,5 @@
 ---
-layout: computer-matters
+layout: blog
 title: Find The Bottleneck of Programs with Gprof
 location: NKU, China
 post: true

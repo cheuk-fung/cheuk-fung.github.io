@@ -27,60 +27,9 @@ It's the mysterious field I'm currently pursuing.
 =--
 
 +-- {.section}
-Blog
-=====
-I record part of my ideas, thoughts and notes here.
-
-A complete archive of [past][] posts is available via the link at the
-top of the page and a [feed][] of the most recent posts combining all
-the following categories is also available.
-[![Feed icon](/files/css/feed-icon-14x14.png){:title="Atom feed of recent posts" .right}][feed]
-
-[past]: /past
-[feed]: /atom.xml
-=--
-
-+-- {.section}
-[Thoughts](/thoughts)
----------------------
-Thoughts on the fields of my interest, including operating systems,
-compilers, languages, data structures and algorithm design, etc.
-{% for post in site.categories.thoughts limit:5 %}
-<ul class="compact recent">
-<li>
-	<a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }}</a>
-	<span class="date">{{ post.date | date_to_string }}</span>
-</li>
-</ul>
-{% endfor %}
-=--
-
-+-- {.section}
-[Computer Matters](/computer-matters)
----------------------
-Notes on solutions to some computer related problems I encountered.
-{% for post in site.categories.computer-matters limit:5 %}
-<ul class="compact recent">
-<li>
-	<a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }}</a>
-	<span class="date">{{ post.date | date_to_string }}</span>
-</li>
-</ul>
-{% endfor %}
-=--
-
-+-- {.section}
-[Misc](/misc)
--------------
-Anything else that I want to write.
-{% for post in site.categories.misc limit:5 %}
-<ul class="compact recent">
-<li>
-	<a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }}</a>
-	<span class="date">{{ post.date | date_to_string }}</span>
-</li>
-</ul>
-{% endfor %}
+[Blog](/blog)
+=============
+Where I record part of my ideas, thoughts and notes.
 =--
 
 +-- {.section}

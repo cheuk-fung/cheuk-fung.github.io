@@ -1,5 +1,5 @@
 ---
-layout: misc
+layout: blog
 title: hello, jekyll
 location: NKU, China
 post: true

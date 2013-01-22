@@ -1,19 +1,19 @@
 ---
-layout: misc
+layout: blog
 title: Archives
 section: Past
 
 feed: atom.xml
-keywords: Misc, Life
+keywords: blog
 ---
 
 Archives
 ========
 
-This is the complete archive of posts from _[Misc](/misc)_
-in reverse chronological order.
+This is the complete archive of posts on my entire blog in reverse
+chronological order.
 
-{% for post in site.categories.misc %}
+{% for post in site.categories.blog %}
 <div class="section list">
   <h1>{{ post.date | date_to_string }}</h1>
   <p class="line">

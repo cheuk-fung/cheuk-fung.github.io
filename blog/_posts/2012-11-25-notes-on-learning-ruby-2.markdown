@@ -1,5 +1,5 @@
 ---
-layout: thoughts
+layout: blog
 title: 紅寶石學習筆記（二）
 location: NKU, China
 post: true
