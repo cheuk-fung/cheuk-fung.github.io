@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 紅寶石學習筆記（四）
-location: NKU, China
+location: Shenzhen, China
 post: true
 
 excerpt: A newbie to Ruby.
