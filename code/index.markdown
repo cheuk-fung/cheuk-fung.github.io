@@ -13,21 +13,27 @@ non-research related programming I am currently working or have done.
 Projects
 ========
 [C--](https://github.com/leewings/C--)
-:   A buggy C compiler with limited features. Designed under instruction
-    of the _Purple Dragon Book_.
+:   A buggy C compiler with limited features. Designed under instruction of
+    the _Purple Dragon Book_.
+
+[ACM Ladder](https://github.com/leewings/ACM-Ladder)
+:   A level-based [ACM-ICPC][] training site inspired by the idea of [USACO
+    Training Program][USACO] and developed using rails and twitter bootstrap.
+[USACO]: http://ace.delos.com/usacogate
 =--
 
 +-- {.section}
 Contests
 ========
 [ACM](https://github.com/leewings/ACM)
-:   Codes of problems I solved in [POJ][], [ZOJ][], [SGU][], [HDOJ][]
-    and [NKOJ][] to practise my algorithm design skill and prepare for
-    [ACM-ICPC](http://icpc.baylor.edu/).
+:   Codes of problems I solved in [POJ][], [ZOJ][], [SGU][], [HDOJ][] and
+    [NKOJ][] to practise my algorithm design skill and prepare for
+    [ACM-ICPC][].
 
     Additionally, a collection of codes of specific algorithms and data
     structures is available under [Templates][].
 
+[ACM-ICPC]: http://icpc.baylor.edu
 [POJ]: http://poj.org
 [ZOJ]: http://acm.zju.edu.cn/onlinejudge
 [SGU]: http://acm.sgu.ru
