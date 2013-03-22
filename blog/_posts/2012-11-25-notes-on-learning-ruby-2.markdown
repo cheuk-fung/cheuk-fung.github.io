@@ -3,8 +3,6 @@ layout: blog
 title: 紅寶石學習筆記（二）
 location: NKU, China
 post: true
-
-excerpt: A newbie to Ruby.
 ---
 
 [Ruby 使用手冊](http://guides.ruby.tw/ruby/)

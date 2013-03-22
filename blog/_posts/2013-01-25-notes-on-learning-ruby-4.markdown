@@ -4,7 +4,7 @@ title: 紅寶石學習筆記（四）
 location: Shenzhen, China
 post: true
 
-excerpt: A newbie to Ruby.
+excerpt: "||= 運算子，for 的視野，heredoc"
 ---
 
 Misc
@@ -52,6 +52,8 @@ h[:z] || h[:z] = 20
 出乎意料，`for` 並沒有開啟一個新的視野（与 `each` 不同），
 所以在 `for` 的區塊中定義的變數會被外部看到。
 因此，[_Ruby 風格指南_](https://github.com/styleguide/ruby) 中建議使用迭代器 (iterator) 取代之。
+
+類似的 `if`, `while`, `case` 等也沒有開啟新的視野。
 
 ### heredoc ###
 可以使用 heredoc 為字串賦值：
