@@ -14,7 +14,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,t
 /* @end */
 
 body {
-	font-family: Palatino, georgia, "times new roman", serif;
+	font-family: Palatino, georgia, "times new roman", sans-serif;
 	background-color: whitesmoke;
 	background-position: center -18em;
 	background-repeat: repeat-x;
@@ -540,8 +540,8 @@ img.maruku-png { }
 	-webkit-box-shadow: 0 0 0 #ccc;
 	-moz-box-shadow: 0 0 0 #ccc;
 }
-.gist .gist-file .gist-data .line_numbers {
-    font-size: 0.75em;
-    line-height: 1.5em;
+.gist .gist-file .gist-data .line-numbers {
+	font-size: 0.75em;
+	line-height: 1.5em;
 }
 /* @end */
