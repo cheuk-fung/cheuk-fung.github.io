@@ -9,8 +9,5 @@ link        : leewings.github.com
 disqus      : cheuk-fung
 
 maruku:
-    use_tex: true
+    use_tex: false
     use_divs: true
-    png_engine: blahtex
-    png_dir: images/latex/
-    png_url: /images/latex/

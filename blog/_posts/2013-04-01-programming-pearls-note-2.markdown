@@ -3,6 +3,7 @@ layout: blog
 title: "Programming Pearls Note #2"
 location: NKU, China
 post: true
+mathjax: true
 
 excerpt: "演算法之美，簡單之美"
 ---
