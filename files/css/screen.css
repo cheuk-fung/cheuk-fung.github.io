@@ -25,7 +25,7 @@ img { -ms-interpolation-mode:bicubic; }
 
 /* IE6 ignores this and uses default size of 16pt */
 html>body { font-size:16px; }
-p { margin: 0 0 1.5em 0; text-align: justify; }
+p { margin: 0 0 1.5em 0; }
 
 a { text-decoration: none; color: #339; }
 a:hover { text-decoration: underline; color: #33f; }
@@ -181,7 +181,8 @@ ol li {
 	list-style-position: inside;
 }
 #page ol {
-    padding-left: 1.5em;
+	padding-left: 1.5em;
+	margin-bottom: 1.5em;
 }
 #page ol li {
 	list-style-position: outside;
