@@ -16,10 +16,10 @@ int main(int argc, char *args[])
     printf("Major:\t%s\n",      "Computer Science");
     printf("Grade:\t%s\n",      "Junior");
     printf("Fields of Interest:\n");
-    printf("\t%s\n",            "Operating Systems");
-    printf("\t%s\n",            "Compilers");
     printf("\t%s\n",            "Data stuctures and algorithms design");
     printf("\t%s\n",            "Mathematics");
+    printf("\t%s\n",            "Operating Systems");
+    printf("\t%s\n",            "Compilers");
 
     return 0;
 }
