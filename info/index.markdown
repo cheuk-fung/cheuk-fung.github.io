@@ -30,7 +30,7 @@ int main(int argc, char *args[])
 
 Contact
 =======
-+-- {.section}
+<div class="section" markdown="1">
 Email
 -----
 <osideal@gmail.com>
@@ -42,4 +42,4 @@ Twitter
 Fanfou
 ------
 [@Leewings](http://fanfou.com/凌风行)
-=--
+</div>

@@ -9,7 +9,7 @@ Code
 Eventually this page will contain links to most of the research and
 non-research related programming I am currently working or have done.
 
-+-- {.section}
+<div class="section" markdown="1">
 Projects
 ========
 [C--](https://github.com/leewings/C--)
@@ -19,16 +19,17 @@ Projects
 [ACM Ladder](https://github.com/leewings/ACM-Ladder)
 :   A level-based [ACM-ICPC][] training site inspired by the idea of [USACO
     Training Program][USACO] and developed using rails and twitter bootstrap.
-[USACO]: http://ace.delos.com/usacogate
-=--
 
-+-- {.section}
+[USACO]: http://ace.delos.com/usacogate
+</div>
+
+<div class="section" markdown="1">
 Contests
 ========
 [ACM](https://github.com/leewings/ACM)
-:   Codes of problems I solved in [POJ][], [ZOJ][], [SGU][], [HDOJ][] and
-    [NKOJ][] to practise my algorithm design skill and prepare for
-    [ACM-ICPC][].
+:   <p markdown="1">Codes of problems I solved in [POJ][], [ZOJ][], [SGU][],
+    [HDOJ][] and [NKOJ][] to practise my algorithm design skill and prepare
+    for [ACM-ICPC][].</p>
 
     Additionally, a collection of codes of specific algorithms and data
     structures is available under [Templates][].
@@ -49,12 +50,13 @@ Contests
 
 [USACO](https://github.com/leewings/USACO)
 :   Have finished all available material.
-=--
+</div>
 
-+-- {.section}
+<div class="section" markdown="1">
 Patches
 =======
 [Blahtex](http://gva.noekeon.org/blahtexml)
 :   Fix "error: ‘isatty’ was not declared in this scope" [here].
+
 [here]: /misc/patch-for-blahtex.html
-=--
+</div>
