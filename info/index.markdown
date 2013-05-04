@@ -17,6 +17,7 @@ int main(int argc, char *args[])
     printf("Grade:\t%s\n",      "Junior");
     printf("Fields of Interest:\n");
     printf("\t%s\n",            "Data stuctures and algorithms design");
+    printf("\t%s\n",            "Machine Learning");
     printf("\t%s\n",            "Mathematics");
     printf("\t%s\n",            "Operating Systems");
     printf("\t%s\n",            "Compilers");
