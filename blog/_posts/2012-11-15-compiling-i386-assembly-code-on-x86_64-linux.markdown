@@ -14,7 +14,7 @@ program.
 
 Take the following hello world program as an example.
 
-<script src="https://gist.github.com/leewings/5925252.js"></script>
+{% gist 5925252 %}
 
 We must select the word size of 32-bit for an i386 program while using
 `as` by adding the command line argument `--32`:

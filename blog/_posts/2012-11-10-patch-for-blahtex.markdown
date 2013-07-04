@@ -29,7 +29,7 @@ by including `unistd.h` in both files.
 
 Here's the patch:
 
-<script src="https://gist.github.com/4050492.js"></script>
+{% gist 4050492 %}
 
 And for Arch Linux users, you can build from [aur](https://aur.archlinux.org/packages/blahtex).
 
