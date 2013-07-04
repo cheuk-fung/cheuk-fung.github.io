@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>紅寶石學習筆記（二） &larr; Blog</title>
+        <meta name="author" content="Ng Cheuk-fung" />
+
+        <link rel="start" href="/" />
+
+        
+
+        
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/files/css/syntax.css" type="text/css" />
+
+        <!-- Homepage CSS -->
+        <link rel="stylesheet" href="/files/css/screen.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="/files/css/print.css" type="text/css" media="print" />
+
+        
+    </head>
+    <body id="">
+        <div id="site">
+
+            <div id="header">
+    <h1>
+    <a href="/blog">Blog</a>
+    <span class="byline">&larr; <a href="/">The Stars My Destination</a></span>
+</h1>
+<ul class="nav">
+    <li><a class="home" href="/">Home</a></li>
+    <li><a class="info" href="/info">Info</a></li>
+    <li><a class="code" href="/code">Code</a></li>
+    <li><a class="past" href="/blog/past.html">Past</a></li>
+</ul>
+
+</div>
+
+
+<div id="page">
+
+    <h1 class="emphnext">紅寶石學習筆記（二）</h1>
+
+    <h2 id="ruby-httpguidesrubytwruby"><a href="http://guides.ruby.tw/ruby/">Ruby 使用手冊</a></h2>
+
+<h3 id="section">物件導向思維</h3>
+
+<ul>
+  <li>“Object oriented” 譯成「物件導向」似乎比「面象對象」更為達意些。</li>
+  <li>在 Ruby 裡任何東西都是物件。</li>
+</ul>
+
+<h3 id="section-1">方法</h3>
+
+<ul>
+  <li>呼叫方法時，如果不會造成歧義，可以省略引數的括號。可是這樣會降低程式碼的可讀性吧？</li>
+  <li>好吧，定義方法時，引數的括號也可以省略……</li>
+</ul>
+
+<h3 id="section-2">存取控制</h3>
+
+<ul>
+  <li><code>Object</code> 類別是所有類別的父類別，不在任何一個類別中定義的「函數」其實是它的<strong>私有</strong>方法，所以 Ruby 是<strong>純物件導向語言</strong>。</li>
+  <li>雖然所有類別從 <code>Object</code> 類別繼承了這些方法，但由於它們是私有方法，所以只能以函數的方式呼叫出來。</li>
+  <li><del><code>private:method</code> 冒號後面不能加空格……</del><br />
+有種東西叫字串符号 (Symbol)，它就是一個可識別的名字而不是字串物串，所以這裡更好的寫法是：<code>private :method</code>。</li>
+</ul>
+
+<h3 id="section-3">單件方法</h3>
+
+<ul>
+  <li>只給予單一物件的方法，竟然有這麼神奇的東西！應該是支援多態的一種方式吧。</li>
+</ul>
+
+<h3 id="section-4">模組</h3>
+
+<ul>
+  <li>Ruby 只支援單一繼承，但可以利用模組實現「受限制的多重繼承」，稱之為「混入 (mixin)」。這樣既滿足了對多重繼承的基本需求，又使得繼承關係不至於過份複雜。</li>
+</ul>
+
+<h3 id="section-5">程序物件</h3>
+
+<ul>
+  <li><code>Proc.new</code> 和 <code>lambda</code> 的區別：</li>
+</ul>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>    <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">foo</span>
+        x = <span style="color:#036;font-weight:bold">Proc</span>.new { <span style="color:#080;font-weight:bold">return</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">I am foo.</span><span style="color:#710">&quot;</span></span> }
+        puts x.call
+        puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">foo ends.</span><span style="color:#710">&quot;</span></span>
+    <span style="color:#080;font-weight:bold">end</span>
+
+    <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">bar</span>
+        x = lambda { <span style="color:#080;font-weight:bold">return</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">I am bar.</span><span style="color:#710">&quot;</span></span> }
+        puts x.call
+        puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">bar ends.</span><span style="color:#710">&quot;</span></span>
+    <span style="color:#080;font-weight:bold">end</span>
+
+    foo
+    bar
+</pre></div>
+</div>
+</div>
+
+<ul>
+  <li>
+    <p>產生的輸出是：</p>
+
+    <pre><code>  I am bar.
+  bar ends.
+</code></pre>
+  </li>
+  <li>
+    <p>Got it?</p>
+  </li>
+</ul>
+
+
+    <address class="signature">
+        <a class="author" href="/">Ng Cheuk-fung</a> 
+        <span class="date">25 November 2012</span>
+        <span class="location">NKU, China</span>
+    </address>
+</div><!-- End Page -->
+<!-- Disqus Comments -->
+<div id="disqus_thread"></div>
+
+<!-- Enable Disqus comments -->
+<script type="text/javascript">
+    var disqus_iframe_css = "leewings.github.io/files/css/screen.css";
+    var disqus_title = "紅寶石學習筆記（二）";
+    var disqus_message = "";
+</script>
+<script type="text/javascript" src="http://disqus.com/forums/cheuk-fung/embed.js"></script>
+
+<noscript>
+    <a href="http://cheuk-fung.disqus.com/?url=ref">View the discussion thread.</a>
+</noscript>
+
+
+
+
+
+            <div id="footer">
+                <address>
+                    <span class="copyright">
+                        Content by 
+                        <a href="/">Ng Cheuk-fung</a>
+                        <br />
+                        Original design by 
+                        <a href="http://mark.reid.name/">Mark Reid</a>
+                    </span>
+                    <span class="engine">
+                        Powered by 
+                        <a href="https://github.com/mojombo/jekyll/" title="A simple, blog aware, static site generator">Jekyll</a>
+                        <br/>
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+                    </span>
+                </address>
+            </div>
+        </div>
+    </body>
+</html>

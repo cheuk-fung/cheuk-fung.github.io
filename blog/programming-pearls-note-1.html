@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Programming Pearls Note #1 &larr; Blog</title>
+        <meta name="author" content="Ng Cheuk-fung" />
+
+        <link rel="start" href="/" />
+
+        
+
+        
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/files/css/syntax.css" type="text/css" />
+
+        <!-- Homepage CSS -->
+        <link rel="stylesheet" href="/files/css/screen.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="/files/css/print.css" type="text/css" media="print" />
+
+        
+    </head>
+    <body id="">
+        <div id="site">
+
+            <div id="header">
+    <h1>
+    <a href="/blog">Blog</a>
+    <span class="byline">&larr; <a href="/">The Stars My Destination</a></span>
+</h1>
+<ul class="nav">
+    <li><a class="home" href="/">Home</a></li>
+    <li><a class="info" href="/info">Info</a></li>
+    <li><a class="code" href="/code">Code</a></li>
+    <li><a class="past" href="/blog/past.html">Past</a></li>
+</ul>
+
+</div>
+
+
+<div id="page">
+
+    <h1 class="emphnext">Programming Pearls Note #1</h1>
+
+    <p>每周都有一些零碎的時間無事可做，在學長的書櫃裡翻書時看到想看很久的《編程珠璣》，正好用来填充這些時間。零零碎碎，大概會看得很慢吧。</p>
+
+<p>第一章描述的「很簡單」的問題就值得好好思考。問題大概是這樣的：</p>
+
+<blockquote>
+  <p>給一個最多包含一千萬個小於一千萬且不重複的正整數的文件排序。最多只能使用 <strong>1MB</strong> 內存。</p>
+</blockquote>
+
+<p>顯然，<strong>1MB</strong> 內存是個很重要的限制條件，這直接决定了我們無法把所有數據讀入內存再使用諸如快速排序、合併排序等演算法處理，甚至使用一個整型来存儲一個數都覺得「奢侈」。這就是需要思考的地方。</p>
+
+<p>在 ACM-ICPC 的訓練中，遇到內存不夠用時，我們會考慮采用<em>位操作 (bitwise operation)</em> 解決。位操作的優點是可以大大的壓縮空間，並通常可以加速運行。但它的限制很多，如數據範圍小、數據集小、無重複數據等，這題是否也適用這种方法呢？書中給了解答，是的，這題滿足位操作的限制。唯一的麻煩是 1MB 的位圖只能表示大概 800 萬個整數，想要容下全部 1000 萬個數，我們需要把內存限制放寬到 <strong>1.25MB</strong>。書中沒有給出位操作的實現細節，而是留為了習題（習題 2）。我的實現如下（使用 C 語言）：</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;stdio.h&gt;</span>
+
+<span style="color:#579">#define</span> MAX_N    <span style="color:#00D">10000000</span>
+<span style="color:#579">#define</span> SHIFT    <span style="color:#00D">5</span>
+<span style="color:#579">#define</span> MASK    <span style="color:#02b">0x1F</span>
+
+<span style="color:#0a5;font-weight:bold">int</span> bitmap[MAX_N / (<span style="color:#00D">1</span> &lt;&lt; SHIFT)];
+
+<span style="color:#088;font-weight:bold">void</span> set(<span style="color:#0a5;font-weight:bold">int</span> x) { bitmap[x &gt;&gt; SHIFT] |= <span style="color:#00D">1</span> &lt;&lt; (x &amp; MASK); }
+<span style="color:#0a5;font-weight:bold">int</span> test(<span style="color:#0a5;font-weight:bold">int</span> x) { <span style="color:#080;font-weight:bold">return</span> bitmap[x &gt;&gt; SHIFT] &amp; (<span style="color:#00D">1</span> &lt;&lt; (x &amp; MASK)); }
+
+<span style="color:#0a5;font-weight:bold">int</span> main(<span style="color:#0a5;font-weight:bold">int</span> argc, <span style="color:#0a5;font-weight:bold">char</span> *argv[])
+{
+    <span style="color:#0a5;font-weight:bold">int</span> i;
+    <span style="color:#080;font-weight:bold">while</span> (~scanf(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%d</span><span style="color:#710">&quot;</span></span>, &amp;i)) {
+        set(i);
+    }
+
+    <span style="color:#080;font-weight:bold">for</span> (i = <span style="color:#00D">0</span>; i &lt; MAX_N; i++) {
+        <span style="color:#080;font-weight:bold">if</span> (test(i)) {
+            printf(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">%d</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>, i);
+        }
+    }
+
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+}
+</pre></div>
+</div>
+</div>
+
+<p>如果一定只能用 1MB 內存呢（習題 5）？受 1.3 節的「40 趟演算法」的啟發，我們可以設計「兩趟演算法」：使用前面的位操作演算法，第一趟排 [0, 5,000,000) 範圍內的數，第二趟排 [5,000,000，10,000,000) 範圍內的。<code>bitmap</code> 的大小減少了一半，佔用內存甚至少於 1MB ，不過運算時間翻倍了。這是典型的「時間換空間」的策略。</p>
+
+
+    <address class="signature">
+        <a class="author" href="/">Ng Cheuk-fung</a> 
+        <span class="date">25 March 2013</span>
+        <span class="location">NKU, China</span>
+    </address>
+</div><!-- End Page -->
+<!-- Disqus Comments -->
+<div id="disqus_thread"></div>
+
+<!-- Enable Disqus comments -->
+<script type="text/javascript">
+    var disqus_iframe_css = "leewings.github.io/files/css/screen.css";
+    var disqus_title = "Programming Pearls Note #1";
+    var disqus_message = "「空間壓縮」和「時間換空間」的思考";
+</script>
+<script type="text/javascript" src="http://disqus.com/forums/cheuk-fung/embed.js"></script>
+
+<noscript>
+    <a href="http://cheuk-fung.disqus.com/?url=ref">View the discussion thread.</a>
+</noscript>
+
+
+
+
+
+            <div id="footer">
+                <address>
+                    <span class="copyright">
+                        Content by 
+                        <a href="/">Ng Cheuk-fung</a>
+                        <br />
+                        Original design by 
+                        <a href="http://mark.reid.name/">Mark Reid</a>
+                    </span>
+                    <span class="engine">
+                        Powered by 
+                        <a href="https://github.com/mojombo/jekyll/" title="A simple, blog aware, static site generator">Jekyll</a>
+                        <br/>
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+                    </span>
+                </address>
+            </div>
+        </div>
+    </body>
+</html>

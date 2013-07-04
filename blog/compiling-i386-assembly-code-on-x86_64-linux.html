@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Compiling i386 Assembly Code on x86_64 Linux &larr; Blog</title>
+        <meta name="author" content="Ng Cheuk-fung" />
+
+        <link rel="start" href="/" />
+
+        
+
+        
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/files/css/syntax.css" type="text/css" />
+
+        <!-- Homepage CSS -->
+        <link rel="stylesheet" href="/files/css/screen.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="/files/css/print.css" type="text/css" media="print" />
+
+        
+    </head>
+    <body id="">
+        <div id="site">
+
+            <div id="header">
+    <h1>
+    <a href="/blog">Blog</a>
+    <span class="byline">&larr; <a href="/">The Stars My Destination</a></span>
+</h1>
+<ul class="nav">
+    <li><a class="home" href="/">Home</a></li>
+    <li><a class="info" href="/info">Info</a></li>
+    <li><a class="code" href="/code">Code</a></li>
+    <li><a class="past" href="/blog/past.html">Past</a></li>
+</ul>
+
+</div>
+
+
+<div id="page">
+
+    <h1 class="emphnext">Compiling i386 Assembly Code on x86_64 Linux</h1>
+
+    <p>I happened to write an i386 assembly program but unfortunately, I’m
+currently working on x86_64 platform Arch Linux. After reading man
+pages of <code>as</code> and <code>ld</code>, I finally found a way to compile and run the
+program.</p>
+
+<p>Take the following hello world program as an example.</p>
+
+<script src="https://gist.github.com/5925252.js"> </script>
+
+<p>We must select the word size of 32-bit for an i386 program while using
+<code>as</code> by adding the command line argument <code>--32</code>:</p>
+
+<pre><code>$ as --32 -o hello.o hello.s
+</code></pre>
+
+<p>For the same reason, <code>-melf_i386</code> must be added while using <code>ld</code> in
+order to emulate the <code>elf_i386</code> linker:</p>
+
+<pre><code>$ ld -melf_i386 -o hello hello.o
+</code></pre>
+
+<p>Run <code>file hello</code> to check if we do things right.</p>
+
+<pre><code>$ file hello
+hello: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+</code></pre>
+
+<p>Eventually, run the target program and enjoy :)</p>
+
+<pre><code>$ ./hello
+hello, world
+</code></pre>
+
+
+    <address class="signature">
+        <a class="author" href="/">Ng Cheuk-fung</a> 
+        <span class="date">15 November 2012</span>
+        <span class="location">NKU, China</span>
+    </address>
+</div><!-- End Page -->
+<!-- Disqus Comments -->
+<div id="disqus_thread"></div>
+
+<!-- Enable Disqus comments -->
+<script type="text/javascript">
+    var disqus_iframe_css = "leewings.github.io/files/css/screen.css";
+    var disqus_title = "Compiling i386 Assembly Code on x86_64 Linux";
+    var disqus_message = "Using as with the --32 option and ld with --melf_i386.";
+</script>
+<script type="text/javascript" src="http://disqus.com/forums/cheuk-fung/embed.js"></script>
+
+<noscript>
+    <a href="http://cheuk-fung.disqus.com/?url=ref">View the discussion thread.</a>
+</noscript>
+
+
+
+
+
+            <div id="footer">
+                <address>
+                    <span class="copyright">
+                        Content by 
+                        <a href="/">Ng Cheuk-fung</a>
+                        <br />
+                        Original design by 
+                        <a href="http://mark.reid.name/">Mark Reid</a>
+                    </span>
+                    <span class="engine">
+                        Powered by 
+                        <a href="https://github.com/mojombo/jekyll/" title="A simple, blog aware, static site generator">Jekyll</a>
+                        <br/>
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+                    </span>
+                </address>
+            </div>
+        </div>
+    </body>
+</html>
