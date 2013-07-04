@@ -536,13 +536,16 @@ img.maruku-png { }
 /* @end */
 
 /* @tweaks for gist */
-.gist .gist-file .gist-data pre {
+.gist .gist-file .gist-data .file-data {
+	font-size: 0.75em;
+	line-height: 1.5em;
+}
+.gist .gist-file .gist-data .file-data pre {
 	box-shadow: 0 0 0 #ccc;
 	-webkit-box-shadow: 0 0 0 #ccc;
 	-moz-box-shadow: 0 0 0 #ccc;
 }
-.gist .gist-file .gist-data .line-numbers {
-	font-size: 0.75em;
-	line-height: 1.5em;
+.gist .gist-file .gist-data .file-data .line-data {
+	width: 100%;
 }
 /* @end */

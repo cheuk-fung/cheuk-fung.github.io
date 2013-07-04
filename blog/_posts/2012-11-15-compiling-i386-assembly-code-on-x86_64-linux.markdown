@@ -14,25 +14,7 @@ program.
 
 Take the following hello world program as an example.
 
-{% highlight gas %}
-# hello.s
-.data
-        msg : .ascii "hello, world\n"
-        len = . - msg
-.text
-.globl _start
-
-_start:
-        movl $len, %edx
-        movl $msg, %ecx
-        movl $4, %eax
-        movl $1, %ebx
-        int  $0x80
-
-        movl $1, %eax
-        movl $0, %ebx
-        int  $0x80
-{% endhighlight %}
+<script src="https://gist.github.com/leewings/5925252.js"></script>
 
 We must select the word size of 32-bit for an i386 program while using
 `as` by adding the command line argument `--32`:

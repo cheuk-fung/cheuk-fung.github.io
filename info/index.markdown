@@ -6,7 +6,7 @@ section: Info
 
 Who am I?
 =========
-{% highlight c %}
+~~~ c
 #include <stdio.h>
 
 int main(int argc, char *args[])
@@ -24,7 +24,7 @@ int main(int argc, char *args[])
 
     return 0;
 }
-{% endhighlight %}
+~~~
 
 <p style="text-align:right">My story is still being written, it's way too early for a conclusion.</p>
 

@@ -3,6 +3,8 @@ layout: blog
 title: 紅寶石學習筆記（二）
 location: NKU, China
 post: true
+
+excerpt: ""
 ---
 
 [Ruby 使用手冊](http://guides.ruby.tw/ruby/)
@@ -37,7 +39,7 @@ post: true
 
 - `Proc.new` 和 `lambda` 的區別：
 
-{% highlight ruby %}
+~~~ ruby
     def foo
         x = Proc.new { return "I am foo." }
         puts x.call
@@ -52,7 +54,7 @@ post: true
 
     foo
     bar
-{% endhighlight %}
+~~~
 
 - 產生的輸出是：
 

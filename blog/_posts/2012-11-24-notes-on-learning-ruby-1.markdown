@@ -43,12 +43,12 @@ excerpt: A newbie to Ruby.
 - `case` 內部使用「關聯運算子（relationship operator）」`===`，可以一次檢查數個條件。
 - `===` 左邊是一般物件時與 `==` 一樣，而左邊是範圍表示式或正規表示式時就會測試右邊是不是在左邊的範圍內或是否符合左邊的正規表示式。所以 `===` 不滿足交換律：
 
-{% highlight ruby %}
+~~~ ruby
     irb(main):001:0> /def/ === "abcdefg"
     => true
     irb(main):002:0> "abcdefg" === /def/
     => false
-{% endhighlight %}
+~~~
 
 - `next` 相當於 C 中的 `continue`；比 C 多了個可以重新開始當前迴圈的 `redo`，這個蠻方便的。
 
@@ -56,7 +56,7 @@ excerpt: A newbie to Ruby.
 
 - 貌似是從 Ruby 1.9 以後，`retry` 必須要和 `rescue` 一起用，所以 `retry` 的範例程式會產生 `SyntaxError`(`Invalid retry`)。改成下面這個樣子就沒問題了：
 
-{% highlight ruby %}
+~~~ ruby
     c = 0
     begin
       for i in 0..4
@@ -69,11 +69,11 @@ excerpt: A newbie to Ruby.
       retry
     end
     print "\n"
-{% endhighlight %}
+~~~
 
 - 後面那個範例和 `yield` 在一起，要明白 `retry` 的是哪一部分：
 
-{% highlight ruby %}
+~~~ ruby
     def WHILE(cond)
         return if not cond
         yield
@@ -87,6 +87,6 @@ excerpt: A newbie to Ruby.
     rescue
       retry
     end
-{% endhighlight %}
+~~~
 
 - 不過這種使用 `retry` 的方式很糟糕的感覺。

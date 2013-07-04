@@ -18,7 +18,7 @@ Misc
 [_What Ruby’s ||= (Double Pipe / Or Equals) Really Does_](http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html)
 這篇文章的一個測試非常好：
 
-{% highlight ruby %}
+~~~ ruby
 h = {}
 
 def h.[]=(k, v)
@@ -37,7 +37,7 @@ h[:y] = h[:y] || 20
 # 3. The a || a = b approach
 h[:z] || h[:z] = 10
 h[:z] || h[:z] = 20
-{% endhighlight %}
+~~~
 
 輸出為：
 
@@ -58,35 +58,38 @@ h[:z] || h[:z] = 20
 ### heredoc ###
 可以使用 heredoc 為字串賦值：
 
-{% highlight ruby %}
+~~~ ruby
 hello = <<END
 hello, world
 END
-{% endhighlight %}
+~~~
 
 但是這樣就不好看了：
-{% highlight ruby %}
+
+~~~ ruby
 if something
   hello = <<END
 hello, world
 END
 end
-{% endhighlight %}
+~~~
 
 這樣好看一點（`END` 前多了一個 `-`）：
-{% highlight ruby %}
+
+~~~ ruby
 if something
   hello = <<-END
 hello, world
   END
 end
-{% endhighlight %}
+~~~
 
 更好看一點？有點 trick... ：
-{% highlight ruby %}
+
+~~~ ruby
 if something
   hello = <<-END.gsub(/^ {4}/, '')
     hello, world
   END
 end
-{% endhighlight %}
+~~~
