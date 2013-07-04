@@ -14,13 +14,12 @@ int main(int argc, char *args[])
     printf("Name:\t%s\n",       "Ng Cheuk-fung");
     printf("School:\t%s\n",     "NKU");
     printf("Major:\t%s\n",      "Computer Science");
-    printf("Grade:\t%s\n",      "Junior");
+    printf("Grade:\t%s\n",      "Senior");
     printf("Fields of Interest:\n");
-    printf("\t%s\n",            "Data stuctures and algorithms design");
-    printf("\t%s\n",            "Machine Learning");
     printf("\t%s\n",            "Mathematics");
+    printf("\t%s\n",            "Machine Learning");
     printf("\t%s\n",            "Operating Systems");
-    printf("\t%s\n",            "Compilers");
+    printf("\t%s\n",            "Data stuctures and algorithms design");
 
     return 0;
 }
@@ -34,7 +33,11 @@ Contact
 <div class="section" markdown="1">
 Email
 -----
-<osideal@gmail.com>
+<leewings.ac@gmail.com>
+
+Google+
+-------
+[@Cheuk-fung Ng](https://plus.google.com/u/1/104783355672665340955/about)
 
 Twitter
 -------
