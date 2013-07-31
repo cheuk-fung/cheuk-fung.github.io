@@ -18,8 +18,8 @@ int main(int argc, char *args[])
     printf("Fields of Interest:\n");
     printf("\t%s\n",            "Mathematics");
     printf("\t%s\n",            "Machine Learning");
-    printf("\t%s\n",            "Operating Systems");
-    printf("\t%s\n",            "Data stuctures and algorithms design");
+    printf("\t%s\n",            "Parallel Computing");
+    printf("\t%s\n",            "Data Stucture & Algorithm Design");
 
     return 0;
 }
@@ -38,6 +38,10 @@ Email
 Google+
 -------
 [@Cheuk-fung Ng](https://plus.google.com/u/1/104783355672665340955/about)
+
+LinkedIn
+--------
+[@Cheuk-fung Ng](https://www.linkedin.com/pub/cheuk-fung-ng/78/37/374)
 
 Twitter
 -------
