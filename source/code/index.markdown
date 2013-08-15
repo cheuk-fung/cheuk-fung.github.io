@@ -48,6 +48,9 @@ Contests
 [Codeforces](https://github.com/leewings/Codeforces)
 :   Handle: [Leewings](http://codeforces.com/profile/Leewings)
 
+[Project Euler](https://github.com/leewings/Project-Euler)
+:   [![Project Euler](http://projecteuler.net/profile/cheuk-fung.png)](http://projecteuler.net/)
+
 [USACO](https://github.com/leewings/USACO)
 :   Have finished all available material.
 </div>
