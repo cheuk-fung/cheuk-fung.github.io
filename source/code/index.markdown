@@ -24,8 +24,8 @@ Projects
 </div>
 
 <div class="section" markdown="1">
-Contests
-========
+Programming Challenges
+======================
 [ACM](https://github.com/leewings/ACM)
 :   <p markdown="1">Codes of problems I solved in [POJ][], [ZOJ][], [SGU][],
     [HDOJ][] and [NKOJ][] to practise my algorithm design skill and prepare
