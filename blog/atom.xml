@@ -4,7 +4,7 @@
     <title>Blog -- The Stars My Destination</title>
     <link href="http://leewings.github.io/blog/atom.xml" rel="self"/>
     <link href="http://leewings.github.io/blog"/>
-    <updated>2013-08-19T14:03:49+08:00</updated>
+    <updated>2013-10-20T08:35:07+00:00</updated>
     <id>http://leewings.github.io/blog</id>
     <author>
         <name>Ng Cheuk-fung</name>
@@ -15,7 +15,7 @@
     <entry>
         <title>Programming Pearls Note #2</title>
         <link href="http://leewings.github.io/blog/programming-pearls-note-2.html"/>
-        <updated>2013-04-01T00:00:00+08:00</updated>
+        <updated>2013-04-01T00:00:00+00:00</updated>
         <id>id:/blog/programming-pearls-note-2</id>
         <content type="html">&lt;p&gt;第二章提出的三個問題很有趣，特別是問題 B，解法真是巧妙。每個問題都有可做筆記之處，一一記之。&lt;/p&gt;
 
@@ -51,7 +51,7 @@
     <entry>
         <title>Programming Pearls Note #1</title>
         <link href="http://leewings.github.io/blog/programming-pearls-note-1.html"/>
-        <updated>2013-03-25T00:00:00+08:00</updated>
+        <updated>2013-03-25T00:00:00+00:00</updated>
         <id>id:/blog/programming-pearls-note-1</id>
         <content type="html">&lt;p&gt;每周都有一些零碎的時間無事可做，在學長的書櫃裡翻書時看到想看很久的《編程珠璣》，正好用来填充這些時間。零零碎碎，大概會看得很慢吧。&lt;/p&gt;
 
@@ -103,7 +103,7 @@
     <entry>
         <title>紅寶石學習筆記（四）</title>
         <link href="http://leewings.github.io/blog/notes-on-learning-ruby-4.html"/>
-        <updated>2013-01-25T00:00:00+08:00</updated>
+        <updated>2013-01-25T00:00:00+00:00</updated>
         <id>id:/blog/notes-on-learning-ruby-4</id>
         <content type="html">&lt;h2 id=&quot;misc&quot;&gt;Misc&lt;/h2&gt;
 
@@ -207,7 +207,7 @@ hello, world&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;
     <entry>
         <title>紅寶石學習筆記（三）</title>
         <link href="http://leewings.github.io/blog/notes-on-learning-ruby-3.html"/>
-        <updated>2012-11-25T00:00:00+08:00</updated>
+        <updated>2012-11-25T00:00:00+00:00</updated>
         <id>id:/blog/notes-on-learning-ruby-3</id>
         <content type="html">&lt;h2 id=&quot;ruby-httpguidesrubytwruby&quot;&gt;&lt;a href=&quot;http://guides.ruby.tw/ruby/&quot;&gt;Ruby 使用手冊&lt;/a&gt;&lt;/h2&gt;
 
@@ -243,7 +243,7 @@ hello, world&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;
     <entry>
         <title>紅寶石學習筆記（二）</title>
         <link href="http://leewings.github.io/blog/notes-on-learning-ruby-2.html"/>
-        <updated>2012-11-25T00:00:00+08:00</updated>
+        <updated>2012-11-25T00:00:00+00:00</updated>
         <id>id:/blog/notes-on-learning-ruby-2</id>
         <content type="html">&lt;h2 id=&quot;ruby-httpguidesrubytwruby&quot;&gt;&lt;a href=&quot;http://guides.ruby.tw/ruby/&quot;&gt;Ruby 使用手冊&lt;/a&gt;&lt;/h2&gt;
 
@@ -325,7 +325,7 @@ hello, world&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;
     <entry>
         <title>紅寶石學習筆記（一）</title>
         <link href="http://leewings.github.io/blog/notes-on-learning-ruby-1.html"/>
-        <updated>2012-11-24T00:00:00+08:00</updated>
+        <updated>2012-11-24T00:00:00+00:00</updated>
         <id>id:/blog/notes-on-learning-ruby-1</id>
         <content type="html">&lt;h2 id=&quot;ruby-httpguidesrubytwruby&quot;&gt;&lt;a href=&quot;http://guides.ruby.tw/ruby/&quot;&gt;Ruby 使用手冊&lt;/a&gt;&lt;/h2&gt;
 
@@ -441,7 +441,7 @@ hello, world&lt;/span&gt;&lt;span style=&quot;color:#710&quot;&gt;
     <entry>
         <title>Find The Bottleneck of Programs with Gprof</title>
         <link href="http://leewings.github.io/blog/find-the-bottleneck-of-programs-with-gprof.html"/>
-        <updated>2012-11-22T00:00:00+08:00</updated>
+        <updated>2012-11-22T00:00:00+00:00</updated>
         <id>id:/blog/find-the-bottleneck-of-programs-with-gprof</id>
         <content type="html">&lt;h2 id=&quot;whats-profiling&quot;&gt;What’s Profiling&lt;/h2&gt;
 
@@ -526,7 +526,7 @@ memory leak, run:&lt;/p&gt;
     <entry>
         <title>Compiling i386 Assembly Code on x86_64 Linux</title>
         <link href="http://leewings.github.io/blog/compiling-i386-assembly-code-on-x86_64-linux.html"/>
-        <updated>2012-11-15T00:00:00+08:00</updated>
+        <updated>2012-11-15T00:00:00+00:00</updated>
         <id>id:/blog/compiling-i386-assembly-code-on-x86_64-linux</id>
         <content type="html">&lt;p&gt;I happened to write an i386 assembly program but unfortunately, I’m
 currently working on x86_64 platform Arch Linux. After reading man
@@ -566,7 +566,7 @@ hello, world
     <entry>
         <title>Patch for Blahtex</title>
         <link href="http://leewings.github.io/blog/patch-for-blahtex.html"/>
-        <updated>2012-11-10T00:00:00+08:00</updated>
+        <updated>2012-11-10T00:00:00+00:00</updated>
         <id>id:/blog/patch-for-blahtex</id>
         <content type="html">&lt;p&gt;If you want to enable &lt;a href=&quot;http://maruku.rubyforge.org&quot;&gt;Maruku&lt;/a&gt;’s support of inline LaTeX-style math&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
 using &lt;a href=&quot;http://gva.noekeon.org/blahtexml&quot;&gt;blahtex&lt;/a&gt;, then this patch would help.&lt;/p&gt;
@@ -605,7 +605,7 @@ by including &lt;code&gt;unistd.h&lt;/code&gt; in both files.&lt;/p&gt;
     <entry>
         <title>hello, jekyll</title>
         <link href="http://leewings.github.io/blog/hello-jekyll.html"/>
-        <updated>2012-11-10T00:00:00+08:00</updated>
+        <updated>2012-11-10T00:00:00+00:00</updated>
         <id>id:/blog/hello-jekyll</id>
         <content type="html">&lt;p&gt;Finally, I set up my first &lt;a href=&quot;https://github.com/mojombo/jekyll/&quot;&gt;Jekyll&lt;/a&gt; site on &lt;a href=&quot;http://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt; after a
 few hours hacking on &lt;a href=&quot;http://mark.reid.name&quot;&gt;Mark Reid&lt;/a&gt;’s wonderful design. I hope that I
