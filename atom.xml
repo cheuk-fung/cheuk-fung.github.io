@@ -4,7 +4,7 @@
     <title>The Stars My Destination</title>
     <link href="http://leewings.github.io/atom.xml" rel="self"/>
     <link href="http://leewings.github.io"/>
-    <updated>2014-02-25T11:40:11+00:00</updated>
+    <updated>2014-02-25T11:42:49+00:00</updated>
     <id>http://leewings.github.io</id>
     <author>
         <name>Ng Cheuk-fung</name>
@@ -68,9 +68,9 @@
 &lt;div&gt;&lt;div class=&quot;CodeRay&quot;&gt;
   &lt;div class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span style=&quot;color:#579&quot;&gt;#include&lt;/span&gt; &lt;span style=&quot;color:#B44;font-weight:bold&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
 
-&lt;span style=&quot;color:#579&quot;&gt;#define&lt;/span&gt; MAX_N    &lt;span style=&quot;color:#00D&quot;&gt;10000000&lt;/span&gt;
-&lt;span style=&quot;color:#579&quot;&gt;#define&lt;/span&gt; SHIFT    &lt;span style=&quot;color:#00D&quot;&gt;5&lt;/span&gt;
-&lt;span style=&quot;color:#579&quot;&gt;#define&lt;/span&gt; MASK    &lt;span style=&quot;color:#02b&quot;&gt;0x1F&lt;/span&gt;
+&lt;span style=&quot;color:#579&quot;&gt;#define&lt;/span&gt; MAX_N &lt;span style=&quot;color:#00D&quot;&gt;10000000&lt;/span&gt;
+&lt;span style=&quot;color:#579&quot;&gt;#define&lt;/span&gt; SHIFT &lt;span style=&quot;color:#00D&quot;&gt;5&lt;/span&gt;
+&lt;span style=&quot;color:#579&quot;&gt;#define&lt;/span&gt; MASK  &lt;span style=&quot;color:#02b&quot;&gt;0x1F&lt;/span&gt;
 
 &lt;span style=&quot;color:#0a5;font-weight:bold&quot;&gt;int&lt;/span&gt; bitmap[MAX_N / (&lt;span style=&quot;color:#00D&quot;&gt;1&lt;/span&gt; &amp;lt;&amp;lt; SHIFT)];
 
