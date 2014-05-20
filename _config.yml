@@ -1,0 +1,14 @@
+name: Ng Cheuk-fung
+link: leewings.github.io
+author: Ng Cheuk-fung
+email: leewings.ac@gmail.com
+github: leewings
+twitter: leewings
+disqus: cheuk-fung
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["autolink", "tables", "strikethrough", "with_toc_data"]
+
+pygments: true
+permalink: none
