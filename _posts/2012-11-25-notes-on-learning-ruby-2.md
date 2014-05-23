@@ -33,7 +33,7 @@ title: 紅寶石學習筆記（二）
 
 - `Proc.new` 和 `lambda` 的區別：
 
-```ruby
+    ```ruby
     def foo
         x = Proc.new { return "I am foo." }
         puts x.call
@@ -48,11 +48,11 @@ title: 紅寶石學習筆記（二）
 
     foo # => "I am foo."
     bar # => nil
-```
+    ```
 
-輸出是：
+   輸出是：
 
-```
-    I am bar.
-    bar ends.
-```
+   ```
+   I am bar.
+   bar ends.
+   ```

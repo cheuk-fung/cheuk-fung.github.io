@@ -36,23 +36,22 @@ title: 紅寶石學習筆記（一）
 
 - 測試真值時，除了 `false` 和 `nil` 之外的東西都視為真。（**`0` 也為 `true`！**）
 - `case` 內部使用「關聯運算子（relationship operator）」`===`，可以一次檢查數個條件。
+- `next` 相當於 C 中的 `continue`，进入下一個迭代。
+- `redo` 重新開始當前迭代。
 - `===` **左邊**是一般物件時與 `==` 一樣，而**左邊**是範圍表示式或正規表示式時會測試**右邊**是否在左邊的範圍內或是否與左邊的正規表示式匹配。
 
-```ruby
+    ```ruby
     irb(main):001:0> /def/ === "abcdefg" # "abcdefg" 與 /def/ 匹配
     => true
     irb(main):002:0> "abcdefg" === /def/ # 此時 `===` 相當於 `==`，两邊型別不同，結果為 `false`
     => false
-```
-
-- `next` 相當於 C 中的 `continue`，进入下一個迭代。
-- `redo` 重新開始當前迭代。
+    ```
 
 ### 迭代器
 
 - 從 Ruby 1.9 開始不再支持在迴圈或迭代中使用 `retry`[[1](#ref1)]，所以 `retry` 的範例程式無法運行，會產生 `SyntaxError`(`Invalid retry`)。可以改成下面這樣：
 
-```ruby
+    ```ruby
     c = 0
     begin
       for i in 0..4
@@ -65,6 +64,6 @@ title: 紅寶石學習筆記（一）
       retry
     end
     print "\n"
-```
+    ```
 
 <a name="ref1"></a>[1]: http://svn.ruby-lang.org/repos/ruby/tags/v1_9_1_0/NEWS
