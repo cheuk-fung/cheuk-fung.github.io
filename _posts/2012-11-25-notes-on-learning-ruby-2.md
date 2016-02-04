@@ -18,7 +18,7 @@ title: 紅寶石學習筆記（二）
 
 - Ruby 是**純物件導向語言**。
 - `Object` 類別是所有類別的父類別，不在任何一個類別中定義的「函數」其實是它的**私有**方法。雖然所有類別都從 `Object` 類別繼承了這些方法，但由於它們是私有方法，所以只能以函數的方式呼叫。
-- ~~<code>private:method</code> 冒號後面不能加空格。~~  
+- <del><code>private:method</code> 冒號後面不能加空格。</del>  
 `:method` 是**字串符号** (Symbol)，它是一個可識別的名字而不是字串物串。這裡更好的寫法是：`private :method`。
 
 ### 單件方法
@@ -33,26 +33,26 @@ title: 紅寶石學習筆記（二）
 
 - `Proc.new` 和 `lambda` 的區別：
 
-    ```ruby
-    def foo
-        x = Proc.new { return "I am foo." }
-        puts x.call
-        puts "foo ends."
-    end
+```ruby
+def foo
+  x = Proc.new { return "I am foo." }
+  puts x.call
+  puts "foo ends."
+end
 
-    def bar
-        x = lambda { return "I am bar." }
-        puts x.call
-        puts "bar ends."
-    end
+def bar
+  x = lambda { return "I am bar." }
+  puts x.call
+  puts "bar ends."
+end
 
-    foo # => "I am foo."
-    bar # => nil
-    ```
+foo # => "I am foo."
+bar # => nil
+```
 
    輸出是：
 
-   ```
-   I am bar.
-   bar ends.
-   ```
+```
+I am bar.
+bar ends.
+```

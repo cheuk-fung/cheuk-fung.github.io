@@ -40,30 +40,30 @@ title: 紅寶石學習筆記（一）
 - `redo` 重新開始當前迭代。
 - `===` **左邊**是一般物件時與 `==` 一樣，而**左邊**是範圍表示式或正規表示式時會測試**右邊**是否在左邊的範圍內或是否與左邊的正規表示式匹配。
 
-    ```ruby
-    irb(main):001:0> /def/ === "abcdefg" # "abcdefg" 與 /def/ 匹配
-    => true
-    irb(main):002:0> "abcdefg" === /def/ # 此時 `===` 相當於 `==`，两邊型別不同，結果為 `false`
-    => false
-    ```
+```ruby
+irb(main):001:0> /def/ === "abcdefg" # "abcdefg" 與 /def/ 匹配
+=> true
+irb(main):002:0> "abcdefg" === /def/ # 此時 `===` 相當於 `==`，两邊型別不同，結果為 `false`
+=> false
+```
 
 ### 迭代器
 
 - 從 Ruby 1.9 開始不再支持在迴圈或迭代中使用 `retry`[[1](#ref1)]，所以 `retry` 的範例程式無法運行，會產生 `SyntaxError`(`Invalid retry`)。可以改成下面這樣：
 
-    ```ruby
-    c = 0
-    begin
-      for i in 0..4
-        print i
-        raise if i == 2 and c == 0
-      end
-    rescue
-      c = 1
-      print "\n"
-      retry
-    end
-    print "\n"
-    ```
+```ruby
+c = 0
+begin
+  for i in 0..4
+    print i
+    raise if i == 2 and c == 0
+  end
+rescue
+  c = 1
+  print "\n"
+  retry
+end
+print "\n"
+```
 
-<a name="ref1"></a>[1]: http://svn.ruby-lang.org/repos/ruby/tags/v1_9_1_0/NEWS
+<a name="ref1"></a>[1]: <http://svn.ruby-lang.org/repos/ruby/tags/v1_9_1_0/NEWS>
