@@ -15,6 +15,7 @@ title: Spark 程序依賴問題兩則
 ```xml
 <plugin>
     <artifactId>maven-dependency-plugin</artifactId>
+    <version>2.10</version>
     <executions>
         <execution>
             <phase>package</phase>
@@ -46,13 +47,19 @@ exec "spark-submit",
 
 我的程序使用 gson 解析從 kafka 中接收的數據。在單獨測試時，解析模塊正常工作，而提交到 Spark 後卻抛出解析異常。一番調試後，發現在 Spark 上運行時 `@TypeAdapter` 並不起作用，導致 gson 不知如何解析某個類型。然而，我在 `--jars` 參數後指定的 gson 確實是程序依賴的版本，不應該不識別。
 
-我猜測原因是 Spark 運行環境中，在加載 `--jars` 指定的 jar 之前，已加載過老版本的 gson。然而 Spark 尚不支持優先加載用戶指定的 jar，所以无法替換運行環境中已存在的老版本依賴。幸好解決依賴衝突常用的 [maven-shade-plugin][] 有個 [relocate][] 功能可以幫助我繞過這個問題。
+我猜測原因是 Spark 運行環境中，在加載 `--jars` 指定的 jar 之前，已加載過老版本的 gson。雖然可以使用如下兩個參數使 Spark 優先加載 user classpath，但這樣會有風險。
+
+- `--conf spark.executor.userClassPathFirst=true`
+- `--conf spark.driver.userClassPathFirst=true`
+
+比如，user classpath 中某個類新於 Spark classpath 中的，然而 Spark 用到了新版本中已移除的方法……幸好解決依賴衝突常用的 [maven-shade-plugin][] 有個 [relocate][] 功能可以幫助我繞過這個問題。
 
 relocate 可以將一個 package 改名成另一個，並修改程序中所有使用這個 package 的地方使用改名後的 package。比如，如下配置將 gson 包含在生成的 jar 中，並將 `com.google.gson` / `com.google.gson.*` 改名為 `shaded.com.google.gson` / `shaded.com.google.gson.*`：
 
 ```xml
 <plugin>
     <artifactId>maven-shade-plugin</artifactId>
+    <version>2.4.3</version>
     <executions>
         <execution>
             <phase>package</phase>
