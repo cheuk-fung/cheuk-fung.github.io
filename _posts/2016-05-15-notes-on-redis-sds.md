@@ -16,7 +16,7 @@ sds 的實現位於 [sds.h][] 和 [sds.c][]。
 [sds.h]: https://github.com/antirez/redis/blob/unstable/src/sds.h
 [sds.c]: https://github.com/antirez/redis/blob/unstable/src/sds.c
 
-### 數據結構
+## 數據結構
 
 實現 sds 的數據結構如下：
 
@@ -63,9 +63,9 @@ sds 的實現位於 [sds.h][] 和 [sds.c][]。
 [packed]: https://gcc.gnu.org/onlinedocs/gcc-5.3.0/gcc/Type-Attributes.html
 [fam]: https://en.wikipedia.org/wiki/Flexible_array_member
 
-### API 筆記
+## API 筆記
 
-#### SDS_HDR_VAR
+### SDS_HDR_VAR
 
 ```c
 #define SDS_HDR_VAR(T,s) struct sdshdr##T *sh = (void*)((s)-(sizeof(struct sdshdr##T)));
@@ -73,7 +73,7 @@ sds 的實現位於 [sds.h][] 和 [sds.c][]。
 
 計算 sds 的 header 位置，並聲明一個 `sdshdrT` 的指針 `sh` 指向 header。
 
-#### SDS_HDR
+### SDS_HDR
 
 ```c
 #define SDS_HDR(T,s) ((struct sdshdr##T *)((s)-(sizeof(struct sdshdr##T))))
@@ -81,7 +81,7 @@ sds 的實現位於 [sds.h][] 和 [sds.c][]。
 
 將 sds 轉換為 header 的指針。與 `SDS_HDR_VAR` 的區別是 `SDS_HDR` 只計算 sds 的 header 指針，而 `SDS_HDR_VAR` 還會為此指針聲明一個變量 `sh`。
 
-#### sdsnewlen
+### sdsnewlen
 
 ```c
 sds sdsnewlen(const void *init, size_t initlen);
@@ -95,7 +95,7 @@ sds sdsnewlen(const void *init, size_t initlen);
 if (type == SDS_TYPE_5 && initlen == 0) type = SDS_TYPE_8;
 ```
 
-#### sdsMakeRoomFor
+### sdsMakeRoomFor
 
 ```c
 sds sdsMakeRoomFor(sds s, size_t addlen);
@@ -118,7 +118,7 @@ sds sdsMakeRoomFor(sds s, size_t addlen) {
 }
 ```
 
-#### sdsIncrLen
+### sdsIncrLen
 
 ```c
 void sdsIncrLen(sds s, int incr);
