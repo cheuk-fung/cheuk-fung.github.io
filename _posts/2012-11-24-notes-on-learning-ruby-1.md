@@ -49,7 +49,7 @@ irb(main):002:0> "abcdefg" === /def/ # 此時 `===` 相當於 `==`，两邊型�
 
 ### 迭代器
 
-- 從 Ruby 1.9 開始不再支持在迴圈或迭代中使用 `retry`[[1](#ref1)]，所以 `retry` 的範例程式無法運行，會產生 `SyntaxError`(`Invalid retry`)。可以改成下面這樣：
+- 從 Ruby 1.9 開始不再支持在迴圈或迭代中使用 `retry`<sup>[[1](#fn1)]</sup>，所以 `retry` 的範例程式無法運行，會產生 `SyntaxError`(`Invalid retry`)。可以改成下面這樣：
 
 ```ruby
 c = 0
@@ -66,4 +66,4 @@ end
 print "\n"
 ```
 
-<a name="ref1"></a>[1]: <http://svn.ruby-lang.org/repos/ruby/tags/v1_9_1_0/NEWS>
+<span id="fn1" />[1]: <http://svn.ruby-lang.org/repos/ruby/tags/v1_9_1_0/NEWS>
