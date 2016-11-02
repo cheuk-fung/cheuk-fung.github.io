@@ -29,3 +29,7 @@ title: SICP 筆記
 - Stream 的表逹能力很強，但隨著抽象層次的提昇，代碼也更加難懂了
 
 ## 第四章
+
+- > Metalinguistic abstraction—establishing new languages—...
+- 構建程序可以看作是在構建解決特定問題的語言（DSL）
+  > In fact, we can regard almost any program as the evaluator for some language. ... Seen from this perspective, the technology for coping with large-scale computer systems merges with the technology for building new computer languages, and computer science itself becomes no more (and no less) than the discipline of constructing appropriate descriptive languages.

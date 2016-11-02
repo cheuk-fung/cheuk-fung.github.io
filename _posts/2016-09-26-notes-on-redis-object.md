@@ -3,7 +3,7 @@ layout: post
 title: Redis 閱讀筆記：Redis Object
 ---
 
-Redis 實現了一套簡單的類型系統，其對象的數據結構和相關函數聲明於頭文件 `server.h`，實現於 `object.c`。
+Redis 實現了一套簡單的類型系統，其對象的數據結構和相關函數聲明於頭文件 _server.h_，實現於 _object.c_。
 
 ## 數據結構
 
