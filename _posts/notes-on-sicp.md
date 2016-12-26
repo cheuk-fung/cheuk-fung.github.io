@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SICP 筆記
+title: SICP 閱讀筆記
 ---
 
 在線閱讀：[Structure and Interpretation of Computer Programs](http://sarabander.github.io/sicp/)
@@ -9,8 +9,8 @@ title: SICP 筆記
 
 ## 第一章
 
-- scheme 語法
-- 感受到了 lisp 的簡洁和表逹力，怪不得會有人喜歡這個滿屏都是括號的語言
+- Scheme 語法
+- 感受到了 Lisp 的簡洁和表逹力，怪不得會有人喜歡這個滿屏都是括號的語言
 - 計算機語言作為從數學到計算機的抽象表達
 - 乍一看還以為是在看數學書…
 
@@ -38,4 +38,10 @@ title: SICP 筆記
 
   > In fact, we can regard almost any program as the evaluator for some language. ... Seen from this perspective, the technology for coping with large-scale computer systems merges with the technology for building new computer languages, and computer science itself becomes no more (and no less) than the discipline of constructing appropriate descriptive languages.
 
-- 用 scheme 寫了個 scheme 解釋器，在此過程中，實踐了不少編程技術和設計模式。比如 `eval` 一开始運用了 [Template Method]({% post_url 2016-03-28-notes-on-gof-3 %}#template-method-)，後來將 `analyze` 分離後，可視為 [Facade]({% post_url 2016-03-26-notes-on-gof-2 %}#facade-)。
+- 用 Scheme 寫了個 Scheme 解釋器，在此過程中，實踐了不少編程技術和設計模式。比如 `eval` 一开始運用了 [Template Method]({% post_url 2016-03-28-notes-on-gof-3 %}#template-method-)，後來將 `analyze` 分離後，可視為 [Facade]({% post_url 2016-03-26-notes-on-gof-2 %}#facade-)。
+- Nondeterministic Scheme 很有趣，它將深度優先搜索集成到了語言中，用戶只需要提供可能的分支和回溯的條件就好了。
+
+  > the execution procedures in the `amb` evaluator take three arguments: the environment, and two procedures called _continuation procedures_. ... Constructing and calling appropriate continuations is the mechanism by which the nondeterministic evaluator implements backtracking.
+
+- Logic Programming 中實現的 query interpreter 也很有趣。設定好適當的約束，即可以解 `1 + 2 = x`，也可以解 `1 + x = 3`。
+- 這章不只是寫了個 Scheme 解釋器，還將應用程序當成 DSL 來實現。DSL 這點 Ruby 學習得非常好。
