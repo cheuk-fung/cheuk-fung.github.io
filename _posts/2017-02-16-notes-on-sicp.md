@@ -46,11 +46,17 @@ title: SICP 閱讀筆記
 
 ## 第五章
 
-- 建立一個基於寄存器的虛擬機器及支持的原子操作，並實現一個虛擬機器的模擬器，能夠執行類似於彙編語言的機器語言。
+- 建立了一個基於寄存器的虛擬機器及支持的原子操作，並實現一個虛擬機器的模擬器，能夠執行類似於彙編語言的機器語言。
 - 講解了簡單的內存管理和垃圾回收機制
 - 又實現了一個 Scheme 解釋器，與第四章中的實現不同，這回需要將 Scheme 「翻譯」成虛擬機器的機器語言。
 - 實現了一個 Scheme 編譯器。有趣的是，這個編譯器可以和上述的解釋器合起來使用，程序的一部分編譯一部分解釋。
 - 解釋器將機器語言「昇級」成了程序；編譯器反之，將程序「降級」成了機器語言。
+
+  > An interpreter raises the machine to the level of the user program; a compiler lowers the user program to the level of the machine language.
+
 - 尾調用指函數在末尾位置調用自己或另一個函數。執行尾調用時可以不在調用棧中新增一個棧幀，只需要更新它，並且最後一次調用的返回值可以直接返回給首次調用的位置。Scheme 可以將循環寫成遞歸而不損失性能正是利用了尾調用。
+- 為什麼 C 和 Pascal 的編譯器不實現尾調用優化？
+
+  > The difficulty with tail recursion in these languages is that their implementations use the stack to store procedure arguments and local variables as well as return addresses.
 
 _SICP_ 从 Scheme 開始講解了計算機科學的基础概念，逐步構建了一個五臓俱全的虛擬機器。面面俱到又非點到為止。草草讀過一遍，並沒有做幾道習題，亦收穫不少。
